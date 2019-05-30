@@ -1,79 +1,94 @@
 <html>
 	<head>
 		<title>Art Tutorial</title>
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!--More custom CSS-->
 		<link rel = "stylesheet" type = "text/css" href="style.css">
 		<meta charset="UTF-8">
 		<meta name="Author" content="Justin Johnson">
 		<meta name="viewport" content="width=device-width, intial-scale=1.0">
 	</head>
+	<!--End of heading-->
 	<body>
+		<div class="container-fluid">
 		<image src = "cyberart_by_justin_name.png" id = "logo"></image>
-		<h1>Art Tutorial</h1>
-		<p id = "intro">Mostly suggestions. No need to follow this word-for-word. In fact, <b>DON'T</b> follow it word-for-word! 
+		<h1 class="center-txt">Art Tutorial</h1>
+		<p id = "intro">Mostly suggestions. No need to follow this word-for-word. In fact, <b>DON'T</b> follow it word-for-word!
 		See how you can take these rules and filp them around a bit and make them your own. :)</p>
-		<h2>Step 1: Photoshop</h2>
-		<ul class = "dblSpace">
-			<li><b>Sample Images</b>: 
-			The first step is finding some good sample images. 
-			It's all in the shapes and forms for this step.
-			I usually like using wave and cloud sample images.
-			You can find plently of good (free) images via Unsplash.
-			</li>
-			<li><b>Blending Stuff Up</b>: 
-			Usually after putting (on average) 2 images, separate layers, 
-			I set the front layer blend mode to 'Difference'.
-			From there do a bit of color adjusting to whatever you want: 
-			It'll probably change more in the end anyways. Add some "Hue/Saturation" layers to one or both
-			of the sample images (directly above the respective image layers). Create clipping masks so each layer applies to the individual layer below,
-			and not the whole image. Final touch, to make the colors a bit less harsh than what they likely are,
-			add a "Solid Color" layer and set it to a 'fairly dark gray' (<strong>NOT</strong> 
-			completely black, or anything lighter than maybe a grayscale value 80-100). Set that solid 
-			color layer to blend mode "Lighten".
-			</li>
-			<li><b>Pack it all up</b>:
-			Honestly, this step seems a lot more optional in theory, but it makes a lot less mess after.
-			Select ALL the layers you just made, and convert it all to a smart object.
-			Export all of this: we'll use the exported image for step 2.
-			</li>
-		</ul>
-		<!-- STEP 2 -->
-		<h2>Step 2 (A): GIMP</h2>
-		<ul class = "dblSpace">
-			<li>Open up GIMP. You're gonna want to install the GMIC plugin if you havent already.</li>
-			<li>Open up the 'scrap' image wherever you saved it.</li>
-			<li>Open the GMIC plugin to do the editing here. I usually use the effects in the <b>Degredations</b> section. That section has a lot of glitchy effects: 
-			honestly you can use whatever you want, but the <b>Pixel Sort</b> and <b>Warp by Intensity</b> are two favorites that I very commonly use.</li>
-		</ul>
-		<h2>Step 2 (B): Hex Editing in Webp Format</h2>
-		<ul class = "dblSpace">
-			<li>You can do this one and/or (A): but this step explains how I get the webp glitching effect.</li>
-			<li>Open up that 'scrap' image from step 1 into honestly any image converter that can convert images to webp format. I recommend <b>ImageMagick</b>.
-			It's completely free and doesn't take a lot of space.</li>
-			<li>But whatever you use, convert the image to <b>.webp</b> format.</li>
-			<li>Open the webp converted image into the hex editor. <strong>This next part is kinda important with this approach!</strong></li>
-			<ol>
-				<li>Save a copy of that webp image as the one you'll datamosh in the hex editor. Because most hex editors don't come with the ability to undo too much.
-				So if you mess up, you'd have to go back to the previous step over again!</li>
-				<li>There's a good article on how to datamosh with a hex editor, and it's the exact same approach here. 
-				There will be a whole bunch of hex numbers that look like absolute gibberish. Go down maybe 60-80% of the way down those long lines of complete nonsense.</li>
-				<li>Change <b>ANYTHING</b>, but not too much. Maybe just replace a number (e.g. a "1" with "F" or something like that). But NOT at the beginning (Header). 
-				It would very likely corrupt the whole file and render it unreadable, which you obviously don't want to happen cause you don't want to start over again.</li>
-				<li>You can usually open and view the result with a web browser (Chrome, Firefox, etc). When you like what you see, you can save the file. 
-				After that, you can go back to the converter to convert it back to a jpg/png file (something that Photoshop can read).</li>
-			</ol>
-		</ul>
-		<!-- STEP 3-->
-		<h2>Step 3: Back to Photoshop</h2>
-		<p>I say this throughout the tutorial, but this part here is definitely a lot more improv/whatever works best for you.</p>
-		<ul class = "dblSpace">
-			<li>Open up that document file from Step 1. Drag and drop the image(s) from the previous Step 2 into the file as new layers.</li>
-			<li>You can honestly do whatever at this point, but here are some ideas based off of what I've done.</li>
-			<ol>
-				<li>Layer masks to hide & only show very specific aspects from each layer.</li>
-				<li>Add a tiny bit of noise to give that organic feel.</li>
-				<li>More color adjustments: <b>Curves</b> and maybe more<b>Hue/Saturation</b> layers should be good.</li>
-			</ol>
-		</ul>
-		<p>Justin Johnson &#169 2019</p>
+		<!--row container for steps-->
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-6">
+			<h2 class="center-txt">Step 1: Photoshop</h2>
+			<ul>
+				<li><b>Sample Images</b>:
+				The first step is finding some good sample images.
+				It's all in the shapes and forms for this step.
+				I usually like using wave and cloud sample images.
+				You can find plently of good (free) images via Unsplash.
+				</li>
+				<li><b>Blending Stuff Up</b>:
+				Usually after putting (on average) 2 images, separate layers,
+				I set the front layer blend mode to 'Difference'.
+				From there do a bit of color adjusting to whatever you want:
+				It'll probably change more in the end anyways. Add some "Hue/Saturation" layers to one or both
+				of the sample images (directly above the respective image layers). Create clipping masks so each layer applies to the individual layer below,
+				and not the whole image. Final touch, to make the colors a bit less harsh than what they likely are,
+				add a "Solid Color" layer and set it to a 'fairly dark gray' (<strong>NOT</strong>
+				completely black, or anything lighter than maybe a grayscale value 80-100). Set that solid
+				color layer to blend mode "Lighten".
+				</li>
+				<li><b>Pack it all up</b>:
+				Honestly, this step seems a lot more optional in theory, but it makes a lot less mess after.
+				Select ALL the layers you just made, and convert it all to a smart object.
+				Export all of this: we'll use the exported image for step 2.
+				</li>
+			</ul>
+			<!-- STEP 2 -->
+			<h2 class="center-txt">Step 2 (A): GIMP</h2>
+			<ul>
+				<li>Open up GIMP. You're gonna want to install the GMIC plugin if you havent already.</li>
+				<li>Open up the 'scrap' image wherever you saved it.</li>
+				<li>Open the GMIC plugin to do the editing here. I usually use the effects in the <b>Degredations</b> section. That section has a lot of glitchy effects:
+				honestly you can use whatever you want, but the <b>Pixel Sort</b> and <b>Warp by Intensity</b> are two favorites that I very commonly use.</li>
+			</ul>
+			<h2>Step 2 (B): Hex Editing in Webp Format</h2>
+			<ul>
+				<li>You can do this one and/or (A): but this step explains how I get the webp glitching effect.</li>
+				<li>Open up that 'scrap' image from step 1 into honestly any image converter that can convert images to webp format. I recommend <b>ImageMagick</b>.
+				It's completely free and doesn't take a lot of space.</li>
+				<li>But whatever you use, convert the image to <b>.webp</b> format.</li>
+				<li>Open the webp converted image into the hex editor. <strong>This next part is kinda important with this approach!</strong></li>
+				<ol>
+					<li>Save a copy of that webp image as the one you'll datamosh in the hex editor. Because most hex editors don't come with the ability to undo too much.
+					So if you mess up, you'd have to go back to the previous step over again!</li>
+					<li>There's a good article on how to datamosh with a hex editor, and it's the exact same approach here.
+					There will be a whole bunch of hex numbers that look like absolute gibberish. Go down maybe 60-80% of the way down those long lines of complete nonsense.</li>
+					<li>Change <b>ANYTHING</b>, but not too much. Maybe just replace a number (e.g. a "1" with "F" or something like that). But NOT at the beginning (Header).
+					It would very likely corrupt the whole file and render it unreadable, which you obviously don't want to happen cause you don't want to start over again.</li>
+					<li>You can usually open and view the result with a web browser (Chrome, Firefox, etc). When you like what you see, you can save the file.
+					After that, you can go back to the converter to convert it back to a jpg/png file (something that Photoshop can read).</li>
+				</ol>
+			</ul>
+			<!-- STEP 3-->
+			<h2 class="center-txt">Step 3: Back to Photoshop</h2>
+			<p>I say this throughout the tutorial, but this part here is definitely a lot more improv/whatever works best for you.</p>
+			<ul>
+				<li>Open up that document file from Step 1. Drag and drop the image(s) from the previous Step 2 into the file as new layers.</li>
+				<li>You can honestly do whatever at this point, but here are some ideas based off of what I've done.</li>
+				<ol>
+					<li>Layer masks to hide & only show very specific aspects from each layer.</li>
+					<li>Add a tiny bit of noise to give that organic feel.</li>
+					<li>More color adjustments: <b>Curves</b> and maybe more<b>Hue/Saturation</b> layers should be good.</li>
+				</ol>
+			</ul> <!--End of list-->
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
 	</body>
+	<footer>
+		<p style="text-align: center;">Justin Johnson &#169 2019</p>
+	</footer>
 </html>

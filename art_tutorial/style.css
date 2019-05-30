@@ -1,32 +1,32 @@
+/*Color Palette:
+	Sizzling Red: #FB3954
+	Vivid Cerulean: #00A6FB
+	Smoky Black: #070707
+	Isabelline: #EFEFEF
+	Baby Powder: #FDFFFC
+*/
 body{
 	font-family: "Microsoft Yi BaiTi";
 	font-weight: bold;
-	/*background-color: #202020;*/
-	background-image: linear-gradient(#202020,#303030);
+	/*background-image: linear-gradient(#202020,#303030);*/
+	background-color: #070707;
 }
 
-h1, h2{
-	text-align: center;
-	color: #00CAFF;
-	text-shadow: 3px 3px black;
+h1, h2 {
+	color: #EFEFEF;
 }
 
-p, ul{
-	color: white;
+p,ul{
+	font-size: 15px;
+	color: #FDFFFC;
 }
-
-ul.dblSpace{
-	line-height: 2.0;
-}
-
-#intro{
+.center-txt{
 	text-align: center;
 }
-
-#theSteps{
-	text-shadow: 3px 2px black;
-}
-
-#logo{
+#logo {
+	display: block;
 	width: 10%;
+	height: 10%;
+	margin-left: auto;
+	margin-right: auto;
 }
