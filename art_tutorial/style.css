@@ -23,10 +23,12 @@ p,ul{
 .center-txt{
 	text-align: center;
 }
+#top-banner{
+	height: 100px;
+}
+
 #logo {
 	display: block;
-	width: 10%;
 	height: 10%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }

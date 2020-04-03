@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<title>Art Tutorial</title>
-		<!--Bootstrap CSS-->
+		<!--Bootstrap CSS + Font Awesome-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<!--More custom CSS-->
 		<link rel = "stylesheet" type = "text/css" href="style.css">
 		<meta charset="UTF-8">
@@ -12,14 +13,29 @@
 	<!--End of heading-->
 	<body>
 		<div class="container-fluid">
-		<image src = "cyberart_by_justin_name.png" id = "logo"></image>
-		<h1 class="center-txt">Art Tutorial</h1>
-		<p id = "intro">Mostly suggestions. No need to follow this word-for-word. In fact, <b>DON'T</b> follow it word-for-word!
-		See how you can take these rules and filp them around a bit and make them your own. :)</p>
+			<!--BEGIN OF TOP-->
+			<div class="row" id="top-banner">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">
+						<image src = "cyberart_by_justin_name.png" class = "img-responsive" id="logo"></image>
+					</div>
+					<!--Social Media Buttons-->
+					<div class="col-sm-3">
+						<button class="btn btn-block">Facebook</button>
+						<button class="btn btn-block">Instagram</button>
+						<button class="btn btn-block">Twitter</button>
+					</div>
+			</div>
+		<!--END OF TOP-->
+		<div class="center-txt">
+			<h1>Art Tutorial</h1>
+			<p>Mostly suggestions. No need to follow this word-for-word. In fact, <strong>DON'T</strong> follow it word-for-word!
+				See how you can take these rules and filp them around a bit and make them your own. :)</p>
+		</div>
 		<!--row container for steps-->
 		<div class="row">
 			<div class="col"></div>
-			<div class="col-6">
+			<div class="col-sm-6">
 			<h2 class="center-txt">Step 1: Photoshop</h2>
 			<ul>
 				<li><b>Sample Images</b>:
@@ -53,7 +69,7 @@
 				<li>Open the GMIC plugin to do the editing here. I usually use the effects in the <b>Degredations</b> section. That section has a lot of glitchy effects:
 				honestly you can use whatever you want, but the <b>Pixel Sort</b> and <b>Warp by Intensity</b> are two favorites that I very commonly use.</li>
 			</ul>
-			<h2>Step 2 (B): Hex Editing in Webp Format</h2>
+			<h2 class="center-txt">Step 2 (B): Hex Editing in Webp Format</h2>
 			<ul>
 				<li>You can do this one and/or (A): but this step explains how I get the webp glitching effect.</li>
 				<li>Open up that 'scrap' image from step 1 into honestly any image converter that can convert images to webp format. I recommend <b>ImageMagick</b>.
@@ -89,6 +105,6 @@
 	</div>
 	</body>
 	<footer>
-		<p style="text-align: center;">Justin Johnson &#169 2019</p>
+		<p style="text-align: center;">Justin Johnson &#169 2019></p>
 	</footer>
 </html>
